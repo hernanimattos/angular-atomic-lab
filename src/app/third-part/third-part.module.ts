@@ -4,6 +4,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [],
@@ -14,12 +15,14 @@ import { MatButtonModule } from '@angular/material/button';
     MatFormFieldModule,
     MatGridListModule,
     MatButtonModule,
+    MatCardModule,
   ],
   exports: [
     MatInputModule,
     MatFormFieldModule,
     MatGridListModule,
     MatButtonModule,
+    MatCardModule,
   ],
 })
 export class ThirdPartModule {}
