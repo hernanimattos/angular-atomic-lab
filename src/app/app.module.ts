@@ -9,6 +9,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UtilModule } from './util/util.module';
 import { interceptorProvider } from './interceptors';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     UtilModule,
     HttpClientModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers
+    }),
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent],
