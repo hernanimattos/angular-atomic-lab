@@ -3,6 +3,11 @@
 
 name: Build and deploy Node.js app to Azure Web App - node-app-angular
 
+env:
+  AZURE_WEBAPP_NAME: node-app-angular # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: "./dist/app-get-lab" # set this to the path to your web app project, defaults to the repository root
+  NODE_VERSION: "14.18.0" # set this to the node version to use
+
 on:
   push:
     branches:
@@ -53,4 +58,4 @@ jobs:
           app-name: "node-app-angular"
           slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BD389FD7F7FB4D37913899E6E9A96381 }}
-          package: .
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
