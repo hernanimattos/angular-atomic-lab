@@ -13,7 +13,7 @@ describe('UserRegisterComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserRegisterComponent);
+    fixture = TestBed.createComponent(UserFormRegisterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -11,6 +11,7 @@ import { interceptorProvider } from './interceptors';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
+import { ThirdPartModule } from './third-part/third-part.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,8 +23,9 @@ import { reducers, metaReducers } from './reducers';
     ReactiveFormsModule,
     UtilModule,
     HttpClientModule,
+    ThirdPartModule,
     StoreModule.forRoot(reducers, {
-      metaReducers
+      metaReducers,
     }),
   ],
   providers: [interceptorProvider],
